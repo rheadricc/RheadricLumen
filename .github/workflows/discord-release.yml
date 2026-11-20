@@ -1,0 +1,35 @@
+# Posts the release notes to the Discord announcement channel when a release is published, or on demand for a tag.
+# Needs the repo secret DISCORD_WEBHOOK_URL (the channel's webhook); without it the job only leaves a notice.
+# Optional repo variables: DISCORD_LANGUAGE (tr, en or both; default both), DISCORD_ROLE_ID (a role to mention).
+name: Discord announcement
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to announce, e.g. v2.1.1-alpha
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+          sparse-checkout-cone-mode: false
+      - name: Post the release notes
+        env:
+          WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          REPO: ${{ github.repository }}
+          LANGUAGE: ${{ vars.DISCORD_LANGUAGE }}
+          ROLE_ID: ${{ vars.DISCORD_ROLE_ID }}
+          GH_TOKEN: ${{ github.token }}
+        run: python3 .github/scripts/discord_announce.py

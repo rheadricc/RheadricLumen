@@ -2,7 +2,7 @@
 
 <img src="docs/logo.png" width="96" alt="Rheadric Lumen logo">
 
-# Rheadric Lumen v2.1.0-alpha
+# Rheadric Lumen v2.1.1-alpha
 
 **All the lighting and fans in your PC, from one window.**
 
@@ -11,7 +11,7 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 
 **English** · [Türkçe](#turkce)
 
-<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.0-alpha/Rheadric-Lumen-v2.1.0-alpha-win64.zip"><img height="40" alt="Download Rheadric Lumen 2.1.0-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.0--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
+<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe"><img height="40" alt="Download Rheadric Lumen 2.1.1-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.1--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
 
 ![No install](https://img.shields.io/badge/install-none%20needed-lightgrey?style=flat-square)
 ![No .NET needed](https://img.shields.io/badge/.NET%20runtime-not%20needed-lightgrey?style=flat-square)
@@ -34,16 +34,21 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 
 ## Download
 
-**The program is right here in this repository:** `RheadricLumen.exe` plus the three DLLs next to it
-(the renderer: `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Get it either way:
+**Recommended: the setup.** The green **Download** button above gives
+[`Rheadric-Lumen-v2.1.1-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe).
+Run it and click through: it installs for your Windows user only (no admin prompt) into
+`%LOCALAPPDATA%\Programs\Rheadric Lumen`, adds a Start menu entry, offers a desktop shortcut on its last page and puts
+an uninstaller under *Settings → Apps*.
 
-1. the green **Download** button above →
-   [`Rheadric-Lumen-v2.1.0-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.0-alpha/Rheadric-Lumen-v2.1.0-alpha-win64.zip) (~16.9 MB), or
-2. the green **`<> Code`** button at the top of this page → **Download ZIP**.
+**Portable, without installing:** the program is also right here in this repository, `RheadricLumen.exe` plus the three
+DLLs next to it (the renderer: `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Get them as
+[`Rheadric-Lumen-v2.1.1-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-win64.zip) (~17.0 MB)
+or with the green **`<> Code`** button at the top of this page → **Download ZIP**. **Extract it** (right-click →
+*Extract All…*), move the **Rheadric Lumen** folder somewhere permanent and double-click `RheadricLumen.exe`. Keep the
+four files together.
 
-Then **extract the zip** (right-click → *Extract All…*), move the **Rheadric Lumen** folder somewhere permanent
-(for example `%LOCALAPPDATA%\Programs\Rheadric Lumen`) and double-click `RheadricLumen.exe`.
-Keep the four files together. Older versions and release notes: [Releases](https://github.com/rheadricc/RheadricLumen/releases).
+Both are the same program and update themselves the same way. Older versions and release notes:
+[Releases](https://github.com/rheadricc/RheadricLumen/releases).
 
 > **Windows SmartScreen warning?** The exe is not digitally signed yet, so Windows shows
 > *"Windows protected your PC"* on first run. Click **More info → Run anyway**.
@@ -176,7 +181,7 @@ the app: with *Include hardware details* on, the report already says what was fo
 | **ASUS Aura** motherboards (USB `0B05:1AA6`, `19AF`, `1939`, `18F3`, `1BED`; X570 and later) | USB | Added from OpenRGB's protocol, not tested yet. Onboard LEDs, AURA RGB and ARGB headers (the fans and strips on them) in one color; nothing is saved to the board |
 | **Gigabyte RGB Fusion 2** motherboards (USB `048D:8297`, `5702`, `5711`, `8950`, `0414:A100`) | USB | Added from OpenRGB's protocol, not tested yet. Onboard LEDs and RGB/ARGB headers in one color; nothing is saved, the board's own setting comes back after a power cycle |
 | **ASRock Polychrome** motherboards (USB `26CE:01A2`) | USB | Added from OpenRGB's protocol, not tested yet. Every zone the controller reports (RGB, ARGB, PCH, I/O cover…) in one color |
-| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | Added from OpenRGB's protocol, not tested yet. Lighting only: pump and fan speeds aren't touched. With NZXT CAM running, CAM may write its own lighting back |
+| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | Added from OpenRGB's protocol, not tested yet. The Krakens' pump speed is written only if you set one ([Fans](#fans-hardware)); the controllers' fan speeds aren't touched. With NZXT CAM running, CAM may write its own lighting back |
 | **NZXT Kraken** X42, X52, X62, X72 and M22 | USB | Added from OpenRGB's protocol, not tested yet. Logo and ring in one color; pump and fan speeds aren't touched |
 | **Corsair** Lighting Node Pro/Core, Commander Pro, LS100, LT100, Obsidian 1000D, SPEC OMEGA RGB | USB | Added from OpenRGB's protocol, not tested yet. The controller keeps the color after the app quits; with iCUE running, iCUE writes its own back |
 | **Lian Li Uni Hub** SL, AL, SL V2, AL V2, SL Infinity | USB | Added from OpenRGB's protocol, not tested yet. The hub doesn't say how many fans are on a channel, so each is filled to its maximum; white is held at 60% as L-Connect does |
@@ -195,6 +200,8 @@ If your graphics card isn't recognised the app **writes nothing to it**: another
 own name with a note that its lighting isn't supported. Every other device, the fans and the overlay still work. Keyboard, mouse, motherboard, cooler and RAM only accept a static color, so
 animated effects on them are drawn frame by frame by the app and run while it's open (it keeps running in the tray).
 
+<a name="fans-hardware"></a>
+
 ### Fans
 
 | Fans | How | Notes |
@@ -203,6 +210,8 @@ animated effects on them are drawn frame by frame by the app and run while it's 
 | **Motherboard fans**: CPU fan, pump, system fans on MSI 400–700 series boards with the **Nuvoton NCT6687D** (e.g. X570, B650, X670E) | Fan chip, through PawnIO | Tested on X670E. See [Motherboard fans](#motherboard-fans) |
 | **Motherboard fans** on MSI's 800 series (B840, B850, X870, Z890) with the **NCT6687D-R** | same | Added from LibreHardwareMonitor's register map, not tested yet |
 | **Motherboard fans** on ASUS boards with a **Nuvoton NCT6796D–NCT6799D** or **NCT6701D** (e.g. B850, X870E) | same | Added from LibreHardwareMonitor's registers, not tested yet |
+| **Motherboard fans** on Gigabyte boards with an **ITE IT8686E, IT8688E, IT8689E** or **IT8696E** (e.g. B450, B550, B650, X670, Z790) | same | Added from LibreHardwareMonitor's registers, not tested yet. Only the headers the chip itself drives |
+| **NZXT Kraken** X3 (X53/X63/X73) and Kraken Elite **pump**, and the Elite's fan connector | USB | Added from liquidctl's protocol notes, not tested yet. **Fans → CPU fans**: a fixed speed (pump 50–100 %), only once you turn it on; liquid temperature and pump RPM |
 
 ### Sensors
 
@@ -237,7 +246,9 @@ What it does and doesn't do, on purpose:
 - Every transfer takes the same system-wide SMBus lock that MSI Center, OpenRGB and HWiNFO use, so it doesn't
   collide with them.
 - It writes colors and the switch to direct mode only (Kingston: also its brightness and slot count, read first).
-  Nothing is saved to the modules and their address is never changed: a full power-off brings back their own lighting.
+  Nothing is saved to the modules. ENE modules still on their power-on address `0x77` (no board software has run
+  since boot, so four sticks look like one) each get an address of their own by slot, as Armoury Crate, MSI Center and
+  OpenRGB do. A full power-off brings back their own lighting and address.
 - **Release** writes the colors the modules had before the app first touched them; so does quitting the app, unless
   **Settings → Restore the lights on exit** is off. Corsair's colors can't be read, so those modules keep the app's
   color until the PC powers off.
@@ -250,7 +261,7 @@ Without PawnIO the RAM is listed, but not written.
 ### Motherboard fans
 
 The same PawnIO driver (its signed `LpcIO` module) lets the app reach the motherboard's fan chip: the NCT6687D on
-MSI boards, an NCT679x or NCT6701D on ASUS boards.
+MSI boards, an NCT679x or NCT6701D on ASUS boards, an ITE IT868x / IT8696E on Gigabyte boards.
 
 1. Open **Fans → Motherboard fans**. This turns on the hardware sensors (the same helper and administrator permission
    as the RAM).
@@ -262,8 +273,9 @@ MSI boards, an NCT679x or NCT6701D on ASUS boards.
 - A fan that reads 0 RPM for 5 seconds while the app drives it goes back to the BIOS until you change its setting.
 - If the app quits, crashes or stops asking for 10 seconds, the fans go back to the BIOS. If the helper itself is
   killed, the next one puts them back before anything else.
-- A fan whose speed doesn't change is not PWM-controlled (3-pin, or on a hub). If **MSI Center**'s or **Armoury
-  Crate**'s fan control is on, it will fight the app for the same headers: leave the fans on **Auto** in one of them.
+- A fan whose speed doesn't change is not PWM-controlled (3-pin, or on a hub). If **MSI Center**'s, **Armoury
+  Crate**'s or **Gigabyte Control Center**'s fan control is on, it will fight the app for the same headers: leave the
+  fans on **Auto** in one of them.
 
 ---
 
@@ -322,6 +334,10 @@ In PowerShell add `| Out-Host` to see the output.
 ---
 
 ## Uninstall
+
+Installed with the setup: *Settings → Apps → Rheadric Lumen → Uninstall*. It closes the app, removes its files,
+shortcut and "Start with Windows", and asks whether to remove the admin helper too (Windows then asks for permission).
+Your settings in `%APPDATA%\RheadricLumen` stay; delete that folder if you don't want them. From the zip:
 
 1. **Settings** → turn **Start with Windows** off.
 2. **Settings → Admin permission → Remove permission**, if you gave it: removes its scheduled task and the helper's
@@ -453,16 +469,21 @@ oyunun üstünde canlı sensör ve FPS paneli. Bir yığın üretici programı y
 
 ## İndir
 
-**Program bu reponun içinde:** `RheadricLumen.exe` ve yanındaki üç DLL (çizim motoru: `libSkiaSharp.dll`,
-`libHarfBuzzSharp.dll`, `av_libglesv2.dll`). İki yoldan biriyle al:
+**Önerilen: kurulum paketi.** Yukarıdaki yeşil **Download** düğmesi
+[`Rheadric-Lumen-v2.1.1-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe)'yi
+indirir. Çalıştırıp ilerle: yalnızca senin Windows kullanıcın için kurar (yönetici izni istemez),
+`%LOCALAPPDATA%\Programs\Rheadric Lumen`'e; Başlat menüsüne ekler, son sayfada masaüstü kısayolu önerir ve
+*Ayarlar → Uygulamalar*'a kaldırıcı koyar.
 
-1. yukarıdaki yeşil **Download** düğmesi →
-   [`Rheadric-Lumen-v2.1.0-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.0-alpha/Rheadric-Lumen-v2.1.0-alpha-win64.zip) (~16.9 MB), ya da
-2. sayfanın üstündeki yeşil **`<> Code`** düğmesi → **Download ZIP**.
+**Kurmadan, taşınabilir:** program bu reponun içinde de duruyor: `RheadricLumen.exe` ve yanındaki üç DLL (çizim motoru:
+`libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Bunları
+[`Rheadric-Lumen-v2.1.1-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-win64.zip) (~17.0 MB)
+olarak ya da sayfanın üstündeki yeşil **`<> Code`** düğmesi → **Download ZIP** ile al. **Zip'i çıkar** (sağ tık →
+*Tümünü Ayıkla…*), **Rheadric Lumen** klasörünü kalıcı bir yere taşı ve `RheadricLumen.exe`'ye çift tıkla. Dört dosyayı
+birlikte tut.
 
-Sonra **zip'i çıkar** (sağ tık → *Tümünü Ayıkla…*), **Rheadric Lumen** klasörünü kalıcı bir yere taşı
-(örneğin `%LOCALAPPDATA%\Programs\Rheadric Lumen`) ve `RheadricLumen.exe`'ye çift tıkla. Dört dosyayı birlikte tut.
-Eski sürümler ve sürüm notları: [Releases](https://github.com/rheadricc/RheadricLumen/releases).
+İkisi de aynı program, kendini aynı şekilde günceller. Eski sürümler ve sürüm notları:
+[Releases](https://github.com/rheadricc/RheadricLumen/releases).
 
 > **SmartScreen uyarısı mı çıktı?** Exe henüz dijital olarak imzalı değil; ilk açılışta *"Windows bilgisayarınızı
 > korudu"* görünür. **Ek bilgi → Yine de çalıştır**'a bas.
@@ -603,7 +624,7 @@ Tam model adıyla [bir issue aç](https://github.com/rheadricc/RheadricLumen/iss
 | **ASUS Aura** anakartlar (USB `0B05:1AA6`, `19AF`, `1939`, `18F3`, `1BED`; X570 ve sonrası) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kart üstü LED'ler, AURA RGB ve ARGB soketleri (onlara bağlı fanlar ve şeritler) tek renk; anakarta bir şey kaydedilmez |
 | **Gigabyte RGB Fusion 2** anakartlar (USB `048D:8297`, `5702`, `5711`, `8950`, `0414:A100`) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kart üstü LED'ler ve RGB/ARGB soketleri tek renk; bir şey kaydedilmez, bilgisayar kapanıp açılınca anakartın kendi ayarı döner |
 | **ASRock Polychrome** anakartlar (USB `26CE:01A2`) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Denetleyicinin bildirdiği her bölge (RGB, ARGB, PCH, I/O kapağı…) tek renk |
-| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Yalnızca ışık: pompa ve fan hızına dokunulmaz. NZXT CAM açıksa kendi ışık ayarını geri yazabilir |
+| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kraken'lerin pompa hızı yalnızca sen bir hız seçersen yazılır ([Fanlar](#tr-fanlar-donanim)); denetleyicilerin fan hızına dokunulmaz. NZXT CAM açıksa kendi ışık ayarını geri yazabilir |
 | **NZXT Kraken** X42, X52, X62, X72 ve M22 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Logo ve halka tek renk; pompa ve fan hızına dokunulmaz |
 | **Corsair** Lighting Node Pro/Core, Commander Pro, LS100, LT100, Obsidian 1000D, SPEC OMEGA RGB | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Renk uygulama kapanınca da denetleyicide kalır; iCUE açıksa kendi ayarını geri yazar |
 | **Lian Li Uni Hub** SL, AL, SL V2, AL V2, SL Infinity | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Hub kanaldaki fan sayısını söylemediği için her kanal en fazla fana göre boyanır; beyaz, L-Connect'teki gibi %60'ta tutulur |
@@ -622,6 +643,8 @@ Ekran kartın tanınmazsa uygulama ona **hiçbir şey yazmaz**: başka üreticin
 desteklenmediği notuyla listelenir. Diğer cihazlar, fanlar ve overlay yine çalışır. Klavye, mouse, anakart, sıvı soğutma ve RAM yalnızca sabit renk kabul eder; bu yüzden onlardaki hareketli
 efektler uygulama tarafından kare kare çizilir ve uygulama açıkken çalışır (tepside çalışmaya devam eder).
 
+<a name="tr-fanlar-donanim"></a>
+
 ### Fanlar
 
 | Fanlar | Nasıl | Not |
@@ -630,6 +653,8 @@ efektler uygulama tarafından kare kare çizilir ve uygulama açıkken çalış�
 | **Anakart fanları**: **Nuvoton NCT6687D**'li MSI 400–700 serisi anakartlarda CPU fanı, pompa, sistem fanları (ör. X570, B650, X670E) | Fan çipi, PawnIO üzerinden | X670E'de denendi. Bkz. [Anakart fanları](#tr-anakart-fanlari) |
 | **NCT6687D-R**'li MSI 800 serisinde (B840, B850, X870, Z890) **anakart fanları** | aynı | LibreHardwareMonitor'ın yazmaç haritasından eklendi, henüz denenmedi |
 | **Nuvoton NCT6796D–NCT6799D** ya da **NCT6701D**'li ASUS anakartlarda **anakart fanları** (ör. B850, X870E) | aynı | LibreHardwareMonitor'ın yazmaçlarından eklendi, henüz denenmedi |
+| **ITE IT8686E, IT8688E, IT8689E** ya da **IT8696E**'li Gigabyte anakartlarda **anakart fanları** (ör. B450, B550, B650, X670, Z790) | aynı | LibreHardwareMonitor'ın yazmaçlarından eklendi, henüz denenmedi. Yalnızca çipin kendisinin sürdüğü soketler |
+| **NZXT Kraken** X3 (X53/X63/X73) ve Kraken Elite **pompası**, Elite'in fan çıkışı | USB | liquidctl'in protokol notlarından eklendi, henüz denenmedi. **Fanlar → İşlemci fanları**: sabit hız (pompa %50–100), yalnızca sen açarsan; sıvı sıcaklığı ve pompa RPM'i |
 
 ### Sensörler
 
@@ -663,7 +688,9 @@ Bilerek yaptıkları ve yapmadıkları:
   *okunabilir*, o da yalnızca sıcaklık sensörü için gereken altı yazmaç; yardımcı onlara giden her başka işlemi reddeder.
 - Her işlem MSI Center, OpenRGB ve HWiNFO'nun kullandığı sistem genelindeki SMBus kilidini alır; onlarla çakışmaz.
 - Yalnızca renkleri ve doğrudan moda geçişi yazar (Kingston'da ayrıca önce okuduğu parlaklık ve slot sayısını).
-  Modüllere bir şey kaydedilmez, adresleri hiç değişmez: bilgisayarı tamamen kapatıp açmak kendi ışıklarını geri getirir.
+  Modüllere bir şey kaydedilmez. Açılış adresi `0x77`'de kalmış ENE modülleri (açılıştan beri anakart yazılımı
+  çalışmamış, dört modül tek görünür) Armoury Crate, MSI Center ve OpenRGB'nin yaptığı gibi yuvasına göre kendi adresini
+  alır. Bilgisayarı tamamen kapatıp açmak kendi ışıklarını ve adreslerini geri getirir.
 - **Bırak**, modüllerin uygulama onlara ilk dokunmadan önceki renklerini geri yazar; **Ayarlar → Çıkışta ışıkları eski
   haline döndür** kapalı değilse uygulamadan çıkmak da. Corsair'in renkleri okunamadığı için o modüller bilgisayar
   kapanana kadar uygulamanın rengiyle kalır.
@@ -676,7 +703,7 @@ PawnIO yoksa RAM listelenir ama ona yazılmaz.
 ### Anakart fanları
 
 Aynı PawnIO sürücüsü (imzalı `LpcIO` modülü) uygulamanın anakartın fan çipine ulaşmasını sağlar: MSI kartlarda
-NCT6687D, ASUS kartlarda NCT679x ya da NCT6701D.
+NCT6687D, ASUS kartlarda NCT679x ya da NCT6701D, Gigabyte kartlarda ITE IT868x / IT8696E.
 
 1. **Fanlar → Anakart fanları**'nı aç. Bu, donanım sensörlerini açar (RAM'le aynı yardımcı ve aynı yönetici izni).
 2. Sağdaki listeden bir fan seç (CPU fanı, pompa ya da bir kasa fanı), sonra **Otomatik** (BIOS eğrisi), **Sabit** ya
@@ -687,8 +714,9 @@ NCT6687D, ASUS kartlarda NCT679x ya da NCT6701D.
 - Uygulama sürerken 5 saniye 0 RPM okuyan fan, sen ayarını değiştirene kadar BIOS'a döner.
 - Uygulama kapanır, çöker ya da 10 saniye boyunca istekte bulunmazsa fanlar BIOS'a döner. Yardımcının kendisi
   öldürülürse bir sonraki, her şeyden önce onları geri verir.
-- Hızı değişmeyen fan PWM kontrollü değildir (3 pinli ya da bir hub üzerinde). **MSI Center**'ın ya da **Armoury
-  Crate**'in fan kontrolü açıksa aynı soketler için uygulamayla çekişir: fanları ikisinden birinde **Otomatik**'te bırak.
+- Hızı değişmeyen fan PWM kontrollü değildir (3 pinli ya da bir hub üzerinde). **MSI Center**'ın, **Armoury
+  Crate**'in ya da **Gigabyte Control Center**'ın fan kontrolü açıksa aynı soketler için uygulamayla çekişir: fanları
+  ikisinden birinde **Otomatik**'te bırak.
 
 ---
 
@@ -753,6 +781,10 @@ sonuna `| Out-Host` ekle.
 <a name="tr-kaldirma"></a>
 
 ## Kaldırma
+
+Kurulum paketiyle kurduysan: *Ayarlar → Uygulamalar → Rheadric Lumen → Kaldır*. Uygulamayı kapatır; dosyalarını,
+kısayolunu ve "Windows ile başlat"ı siler, yönetici yardımcısının da kaldırılmasını isteyip istemediğini sorar (Windows
+o zaman izin ister). `%APPDATA%\RheadricLumen` içindeki ayarların kalır; istemiyorsan o klasörü sil. Zip'le kurduysan:
 
 1. **Ayarlar** → **Windows ile başlat**'ı kapat.
 2. Verdiysen **Ayarlar → Yönetici izni → İzni kaldır**: zamanlanmış görevi ve yardımcının
