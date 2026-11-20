@@ -1,6 +1,7 @@
-# Posts the release notes to the Discord announcement channel when a release is published, or on demand for a tag.
-# Needs the repo secret DISCORD_WEBHOOK_URL (the channel's webhook); without it the job only leaves a notice.
-# Optional repo variables: DISCORD_LANGUAGE (tr, en or both; default both), DISCORD_ROLE_ID (a role to mention).
+# Posts the release to the Discord announcement channel when a release is published, or on demand for a tag.
+# Secrets: DISCORD_WEBHOOK_URL (the announcement channel; without it the job only leaves a notice) and, for test runs,
+# DISCORD_TEST_WEBHOOK_URL (a test channel). Optional repo variables: DISCORD_LANGUAGE (tr, en or both; default both),
+# DISCORD_ROLE_ID (the role to mention), DISCORD_STYLE (card or embed; default card).
 name: Discord announcement
 
 on:
@@ -11,6 +12,10 @@ on:
       tag:
         description: Release tag to announce, e.g. v2.1.1-alpha
         required: true
+      test:
+        description: Post to the test channel (DISCORD_TEST_WEBHOOK_URL) and ping nobody
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -24,12 +29,15 @@ jobs:
         with:
           sparse-checkout: .github
           sparse-checkout-cone-mode: false
-      - name: Post the release notes
+      - name: Post the release
         env:
           WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TEST_WEBHOOK: ${{ secrets.DISCORD_TEST_WEBHOOK_URL }}
+          TEST: ${{ inputs.test }}
           TAG: ${{ github.event.release.tag_name || inputs.tag }}
           REPO: ${{ github.repository }}
           LANGUAGE: ${{ vars.DISCORD_LANGUAGE }}
           ROLE_ID: ${{ vars.DISCORD_ROLE_ID }}
+          STYLE: ${{ vars.DISCORD_STYLE }}
           GH_TOKEN: ${{ github.token }}
         run: python3 .github/scripts/discord_announce.py
