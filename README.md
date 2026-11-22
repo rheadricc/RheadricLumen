@@ -2,7 +2,7 @@
 
 <img src="docs/logo.png" width="96" alt="Rheadric Lumen logo">
 
-# Rheadric Lumen v2.1.1-alpha
+# Rheadric Lumen v2.1.2-alpha
 
 **All the lighting and fans in your PC, from one window.**
 
@@ -11,7 +11,7 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 
 **English** · [Türkçe](#turkce)
 
-<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe"><img height="40" alt="Download Rheadric Lumen 2.1.1-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.1--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
+<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe"><img height="40" alt="Download Rheadric Lumen 2.1.2-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.2--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
 
 ![No install](https://img.shields.io/badge/install-none%20needed-lightgrey?style=flat-square)
 ![No .NET needed](https://img.shields.io/badge/.NET%20runtime-not%20needed-lightgrey?style=flat-square)
@@ -35,14 +35,14 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 ## Download
 
 **Recommended: the setup.** The green **Download** button above gives
-[`Rheadric-Lumen-v2.1.1-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe).
+[`Rheadric-Lumen-v2.1.2-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe).
 Run it and click through: it installs for your Windows user only (no admin prompt) into
 `%LOCALAPPDATA%\Programs\Rheadric Lumen`, adds a Start menu entry, offers a desktop shortcut on its last page and puts
 an uninstaller under *Settings → Apps*.
 
 **Portable, without installing:** the program is also right here in this repository, `RheadricLumen.exe` plus the three
 DLLs next to it (the renderer: `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Get them as
-[`Rheadric-Lumen-v2.1.1-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-win64.zip) (~17.0 MB)
+[`Rheadric-Lumen-v2.1.2-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-win64.zip) (~17.0 MB)
 or with the green **`<> Code`** button at the top of this page → **Download ZIP**. **Extract it** (right-click →
 *Extract All…*), move the **Rheadric Lumen** folder somewhere permanent and double-click `RheadricLumen.exe`. Keep the
 four files together.
@@ -173,7 +173,7 @@ the app: with *Include hardware details* on, the report already says what was fo
 | **ASUS ROG Strix Scope TKL** keyboard | USB, Aura direct mode | Tested, keys and underglow. Nothing is saved to the keyboard permanently |
 | **SteelSeries Aerox 3 Wireless** mouse | SteelSeries GG (GameSense) | Tested. **GG must be running**; the mouse returns to your GG setting when the app quits |
 | Other **SteelSeries** keyboards (Apex), mice (Rival, Sensei, Prime, Aerox) and QcK Prism mousepads | SteelSeries GG (GameSense) | Not tested yet. **GG must be running** |
-| **Logitech G** keyboards, mice, headsets, mousepads, speakers | Logitech G HUB (its LED SDK) | Not tested yet. **G HUB must be running**; every Logitech G device gets the same color and goes back to its G HUB lighting when the app lets go |
+| **Logitech G** keyboards, mice, headsets, mousepads, speakers | Logitech G HUB (its LED SDK) | Not tested yet. **G HUB must be running**; every Logitech G device gets the same color and goes back to its G HUB lighting when the app lets go. Without G HUB, a **G213 Prodigy** is colored straight over USB (one color for its five zones; the keyboard keeps it) |
 | **QMK/VIA** keyboards (Keychron Q, V, K Pro and Max series, most custom boards) | USB, VIA's raw HID | Added from QMK's VIA protocol, not tested yet. Per-key lights and underglow in one color, saved to the keyboard; needs VIA protocol 11 or later |
 | Devices with **Windows Dynamic Lighting** (HID LampArray: keyboards, mice, cases, strips of many makers) | USB HID LampArray | Not tested yet. A device a row above already drives is left to that row. Turn off *Use Dynamic Lighting on my devices* in Windows Settings so the two don't fight |
 | **MSI Mystic Light** motherboards (`0DB0:0076`, e.g. X670E Gaming Plus WiFi) | USB | Tested. JRGB, JARGB and onboard LEDs; nothing is saved to the board permanently |
@@ -181,7 +181,7 @@ the app: with *Include hardware details* on, the report already says what was fo
 | **ASUS Aura** motherboards (USB `0B05:1AA6`, `19AF`, `1939`, `18F3`, `1BED`; X570 and later) | USB | Added from OpenRGB's protocol, not tested yet. Onboard LEDs, AURA RGB and ARGB headers (the fans and strips on them) in one color; nothing is saved to the board |
 | **Gigabyte RGB Fusion 2** motherboards (USB `048D:8297`, `5702`, `5711`, `8950`, `0414:A100`) | USB | Added from OpenRGB's protocol, not tested yet. Onboard LEDs and RGB/ARGB headers in one color; nothing is saved, the board's own setting comes back after a power cycle |
 | **ASRock Polychrome** motherboards (USB `26CE:01A2`) | USB | Added from OpenRGB's protocol, not tested yet. Every zone the controller reports (RGB, ARGB, PCH, I/O cover…) in one color |
-| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | Added from OpenRGB's protocol, not tested yet. The Krakens' pump speed is written only if you set one ([Fans](#fans-hardware)); the controllers' fan speeds aren't touched. With NZXT CAM running, CAM may write its own lighting back |
+| **NZXT** Kraken X3, Kraken Elite, Kraken Z3 (its lighting connector), RGB & Fan Controller, Smart Device V2, Hue 2 | USB | Added from OpenRGB's protocol, not tested yet. The Krakens' pump speed is written only if you set one ([Fans](#fans-hardware)); the controllers' fan speeds aren't touched. With NZXT CAM running, CAM may write its own lighting back |
 | **NZXT Kraken** X42, X52, X62, X72 and M22 | USB | Added from OpenRGB's protocol, not tested yet. Logo and ring in one color; pump and fan speeds aren't touched |
 | **Corsair** Lighting Node Pro/Core, Commander Pro, LS100, LT100, Obsidian 1000D, SPEC OMEGA RGB | USB | Added from OpenRGB's protocol, not tested yet. The controller keeps the color after the app quits; with iCUE running, iCUE writes its own back |
 | **Lian Li Uni Hub** SL, AL, SL V2, AL V2, SL Infinity | USB | Added from OpenRGB's protocol, not tested yet. The hub doesn't say how many fans are on a channel, so each is filled to its maximum; white is held at 60% as L-Connect does |
@@ -211,7 +211,7 @@ animated effects on them are drawn frame by frame by the app and run while it's 
 | **Motherboard fans** on MSI's 800 series (B840, B850, X870, Z890) with the **NCT6687D-R** | same | Added from LibreHardwareMonitor's register map, not tested yet |
 | **Motherboard fans** on ASUS boards with a **Nuvoton NCT6796D–NCT6799D** or **NCT6701D** (e.g. B850, X870E) | same | Added from LibreHardwareMonitor's registers, not tested yet |
 | **Motherboard fans** on Gigabyte boards with an **ITE IT8686E, IT8688E, IT8689E** or **IT8696E** (e.g. B450, B550, B650, X670, Z790) | same | Added from LibreHardwareMonitor's registers, not tested yet. Only the headers the chip itself drives |
-| **NZXT Kraken** X3 (X53/X63/X73) and Kraken Elite **pump**, and the Elite's fan connector | USB | Added from liquidctl's protocol notes, not tested yet. **Fans → CPU fans**: a fixed speed (pump 50–100 %), only once you turn it on; liquid temperature and pump RPM |
+| **NZXT Kraken** X3 (X53/X63/X73), Z3 (Z53/Z63/Z73), Kraken Elite, Kraken 2023, Elite 2023 and Plus 2024 **pump**, and the fan connector of those that have one | USB | Added from liquidctl's protocol notes, not tested yet. The screen on the Z3 and the 2023/2024 models isn't driven. **Fans → CPU fans**: a fixed speed (pump 50–100 %), only once you turn it on; liquid temperature and pump RPM |
 
 ### Sensors
 
@@ -470,14 +470,14 @@ oyunun üstünde canlı sensör ve FPS paneli. Bir yığın üretici programı y
 ## İndir
 
 **Önerilen: kurulum paketi.** Yukarıdaki yeşil **Download** düğmesi
-[`Rheadric-Lumen-v2.1.1-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-setup.exe)'yi
+[`Rheadric-Lumen-v2.1.2-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe)'yi
 indirir. Çalıştırıp ilerle: yalnızca senin Windows kullanıcın için kurar (yönetici izni istemez),
 `%LOCALAPPDATA%\Programs\Rheadric Lumen`'e; Başlat menüsüne ekler, son sayfada masaüstü kısayolu önerir ve
 *Ayarlar → Uygulamalar*'a kaldırıcı koyar.
 
 **Kurmadan, taşınabilir:** program bu reponun içinde de duruyor: `RheadricLumen.exe` ve yanındaki üç DLL (çizim motoru:
 `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Bunları
-[`Rheadric-Lumen-v2.1.1-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.1-alpha/Rheadric-Lumen-v2.1.1-alpha-win64.zip) (~17.0 MB)
+[`Rheadric-Lumen-v2.1.2-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-win64.zip) (~17.0 MB)
 olarak ya da sayfanın üstündeki yeşil **`<> Code`** düğmesi → **Download ZIP** ile al. **Zip'i çıkar** (sağ tık →
 *Tümünü Ayıkla…*), **Rheadric Lumen** klasörünü kalıcı bir yere taşı ve `RheadricLumen.exe`'ye çift tıkla. Dört dosyayı
 birlikte tut.
@@ -616,7 +616,7 @@ Tam model adıyla [bir issue aç](https://github.com/rheadricc/RheadricLumen/iss
 | **ASUS ROG Strix Scope TKL** klavye | USB, Aura direct modu | Denendi, tuşlar ve alt ışık. Klavyeye kalıcı bir şey kaydedilmez |
 | **SteelSeries Aerox 3 Wireless** mouse | SteelSeries GG (GameSense) | Denendi. **GG açık olmalı**; uygulama kapanınca mouse GG'deki ayarına döner |
 | Diğer **SteelSeries** klavyeler (Apex), mouse'lar (Rival, Sensei, Prime, Aerox) ve QcK Prism mousepad'ler | SteelSeries GG (GameSense) | Henüz denenmedi. **GG açık olmalı** |
-| **Logitech G** klavye, mouse, kulaklık, mousepad, hoparlör | Logitech G HUB (LED SDK'sı) | Henüz denenmedi. **G HUB açık olmalı**; tüm Logitech G cihazları aynı rengi alır, uygulama bırakınca G HUB'daki ışığına döner |
+| **Logitech G** klavye, mouse, kulaklık, mousepad, hoparlör | Logitech G HUB (LED SDK'sı) | Henüz denenmedi. **G HUB açık olmalı**; tüm Logitech G cihazları aynı rengi alır, uygulama bırakınca G HUB'daki ışığına döner. G HUB yoksa **G213 Prodigy** doğrudan USB üzerinden boyanır (beş bölge tek renk; klavye rengi kendisi tutar) |
 | **QMK/VIA** klavyeler (Keychron Q, V, K Pro ve Max serileri, çoğu custom klavye) | USB, VIA'nın raw HID'i | QMK'nin VIA protokolünden eklendi, henüz denenmedi. Tuş ışıkları ve alt ışık tek renk, klavyeye kaydedilir; VIA protokolü 11 ya da sonrası gerekir |
 | **Windows Dinamik Aydınlatma** destekli cihazlar (HID LampArray: birçok üreticinin klavye, mouse, kasa, şeritleri) | USB HID LampArray | Henüz denenmedi. Yukarıdaki bir satırın zaten yönettiği cihaz o satıra bırakılır. İkisi çakışmasın diye Windows Ayarları'nda *Cihazlarımda Dinamik Aydınlatmayı kullan*'ı kapatın |
 | **MSI Mystic Light** anakartlar (`0DB0:0076`, ör. X670E Gaming Plus WiFi) | USB | Denendi. JRGB, JARGB ve kart üstü LED'ler; anakarta kalıcı bir şey kaydedilmez |
@@ -624,7 +624,7 @@ Tam model adıyla [bir issue aç](https://github.com/rheadricc/RheadricLumen/iss
 | **ASUS Aura** anakartlar (USB `0B05:1AA6`, `19AF`, `1939`, `18F3`, `1BED`; X570 ve sonrası) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kart üstü LED'ler, AURA RGB ve ARGB soketleri (onlara bağlı fanlar ve şeritler) tek renk; anakarta bir şey kaydedilmez |
 | **Gigabyte RGB Fusion 2** anakartlar (USB `048D:8297`, `5702`, `5711`, `8950`, `0414:A100`) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kart üstü LED'ler ve RGB/ARGB soketleri tek renk; bir şey kaydedilmez, bilgisayar kapanıp açılınca anakartın kendi ayarı döner |
 | **ASRock Polychrome** anakartlar (USB `26CE:01A2`) | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Denetleyicinin bildirdiği her bölge (RGB, ARGB, PCH, I/O kapağı…) tek renk |
-| **NZXT** Kraken X3, Kraken Elite, RGB & Fan Controller, Smart Device V2, Hue 2 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kraken'lerin pompa hızı yalnızca sen bir hız seçersen yazılır ([Fanlar](#tr-fanlar-donanim)); denetleyicilerin fan hızına dokunulmaz. NZXT CAM açıksa kendi ışık ayarını geri yazabilir |
+| **NZXT** Kraken X3, Kraken Elite, Kraken Z3 (ışık bağlantısı), RGB & Fan Controller, Smart Device V2, Hue 2 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Kraken'lerin pompa hızı yalnızca sen bir hız seçersen yazılır ([Fanlar](#tr-fanlar-donanim)); denetleyicilerin fan hızına dokunulmaz. NZXT CAM açıksa kendi ışık ayarını geri yazabilir |
 | **NZXT Kraken** X42, X52, X62, X72 ve M22 | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Logo ve halka tek renk; pompa ve fan hızına dokunulmaz |
 | **Corsair** Lighting Node Pro/Core, Commander Pro, LS100, LT100, Obsidian 1000D, SPEC OMEGA RGB | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Renk uygulama kapanınca da denetleyicide kalır; iCUE açıksa kendi ayarını geri yazar |
 | **Lian Li Uni Hub** SL, AL, SL V2, AL V2, SL Infinity | USB | OpenRGB'nin protokolünden eklendi, henüz denenmedi. Hub kanaldaki fan sayısını söylemediği için her kanal en fazla fana göre boyanır; beyaz, L-Connect'teki gibi %60'ta tutulur |
@@ -654,7 +654,7 @@ efektler uygulama tarafından kare kare çizilir ve uygulama açıkken çalış�
 | **NCT6687D-R**'li MSI 800 serisinde (B840, B850, X870, Z890) **anakart fanları** | aynı | LibreHardwareMonitor'ın yazmaç haritasından eklendi, henüz denenmedi |
 | **Nuvoton NCT6796D–NCT6799D** ya da **NCT6701D**'li ASUS anakartlarda **anakart fanları** (ör. B850, X870E) | aynı | LibreHardwareMonitor'ın yazmaçlarından eklendi, henüz denenmedi |
 | **ITE IT8686E, IT8688E, IT8689E** ya da **IT8696E**'li Gigabyte anakartlarda **anakart fanları** (ör. B450, B550, B650, X670, Z790) | aynı | LibreHardwareMonitor'ın yazmaçlarından eklendi, henüz denenmedi. Yalnızca çipin kendisinin sürdüğü soketler |
-| **NZXT Kraken** X3 (X53/X63/X73) ve Kraken Elite **pompası**, Elite'in fan çıkışı | USB | liquidctl'in protokol notlarından eklendi, henüz denenmedi. **Fanlar → İşlemci fanları**: sabit hız (pompa %50–100), yalnızca sen açarsan; sıvı sıcaklığı ve pompa RPM'i |
+| **NZXT Kraken** X3 (X53/X63/X73), Z3 (Z53/Z63/Z73), Kraken Elite, Kraken 2023, Elite 2023 ve Plus 2024 **pompası**, fan çıkışı olanların fan çıkışı | USB | liquidctl'in protokol notlarından eklendi, henüz denenmedi. Z3 ve 2023/2024 modellerinin ekranı yönetilmez. **Fanlar → İşlemci fanları**: sabit hız (pompa %50–100), yalnızca sen açarsan; sıvı sıcaklığı ve pompa RPM'i |
 
 ### Sensörler
 
