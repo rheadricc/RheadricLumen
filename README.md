@@ -2,7 +2,7 @@
 
 <img src="docs/logo.png" width="96" alt="Rheadric Lumen logo">
 
-# Rheadric Lumen v2.1.2-alpha
+# Rheadric Lumen v2.1.3-alpha
 
 **All the lighting and fans in your PC, from one window.**
 
@@ -11,7 +11,7 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 
 **English** · [Türkçe](#turkce)
 
-<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe"><img height="40" alt="Download Rheadric Lumen 2.1.2-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.2--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
+<a href="https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.3-alpha/Rheadric-Lumen-v2.1.3-alpha-setup.exe"><img height="40" alt="Download Rheadric Lumen 2.1.3-alpha for Windows" src="https://img.shields.io/badge/Download-v2.1.3--alpha%20%7C%20Windows%2010%20%2F%2011-2ea44f?style=for-the-badge"></a>
 
 ![No install](https://img.shields.io/badge/install-none%20needed-lightgrey?style=flat-square)
 ![No .NET needed](https://img.shields.io/badge/.NET%20runtime-not%20needed-lightgrey?style=flat-square)
@@ -35,14 +35,14 @@ live sensors and an FPS overlay on top of your game. One small native app instea
 ## Download
 
 **Recommended: the setup.** The green **Download** button above gives
-[`Rheadric-Lumen-v2.1.2-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe).
+[`Rheadric-Lumen-v2.1.3-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.3-alpha/Rheadric-Lumen-v2.1.3-alpha-setup.exe).
 Run it and click through: it installs for your Windows user only (no admin prompt) into
 `%LOCALAPPDATA%\Programs\Rheadric Lumen`, adds a Start menu entry, offers a desktop shortcut on its last page and puts
 an uninstaller under *Settings → Apps*.
 
 **Portable, without installing:** the program is also right here in this repository, `RheadricLumen.exe` plus the three
 DLLs next to it (the renderer: `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Get them as
-[`Rheadric-Lumen-v2.1.2-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-win64.zip) (~17.0 MB)
+[`Rheadric-Lumen-v2.1.3-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.3-alpha/Rheadric-Lumen-v2.1.3-alpha-win64.zip) (~17.1 MB)
 or with the green **`<> Code`** button at the top of this page → **Download ZIP**. **Extract it** (right-click →
 *Extract All…*), move the **Rheadric Lumen** folder somewhere permanent and double-click `RheadricLumen.exe`. Keep the
 four files together.
@@ -95,6 +95,7 @@ in one window: pick the devices, pick a color or an effect, set the fans, and ke
 | 🌈 **Colors** | Color wheel, HEX input, 8 base colors, a custom slot and favorites. Brightness 0–100 |
 | ✨ **Effects** | **Software effects** run on every selected device: Spectrum, Pulse, Fire, Aurora, Thermal, Sensor and Music (reacts to what you hear). Thermal and Sensor follow a reading you pick (GPU, CPU or RAM, temperature or load) over a range you set. **Hardware effects** (Static, Breathing, Rainbow, Color cycle, Motherboard sync, Off) run on the graphics card itself and stay after a reboot, even with the app closed |
 | 💾 **Profiles** | 6 ready-made looks; save, overwrite and delete your own |
+| 🌙 **Idle off** | When the keyboard, the mouse and the game controller sit untouched for a while (1–120 min), the devices you pick go dark; the first touch brings them back |
 
 ### Fans
 
@@ -470,14 +471,14 @@ oyunun üstünde canlı sensör ve FPS paneli. Bir yığın üretici programı y
 ## İndir
 
 **Önerilen: kurulum paketi.** Yukarıdaki yeşil **Download** düğmesi
-[`Rheadric-Lumen-v2.1.2-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-setup.exe)'yi
+[`Rheadric-Lumen-v2.1.3-alpha-setup.exe`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.3-alpha/Rheadric-Lumen-v2.1.3-alpha-setup.exe)'yi
 indirir. Çalıştırıp ilerle: yalnızca senin Windows kullanıcın için kurar (yönetici izni istemez),
 `%LOCALAPPDATA%\Programs\Rheadric Lumen`'e; Başlat menüsüne ekler, son sayfada masaüstü kısayolu önerir ve
 *Ayarlar → Uygulamalar*'a kaldırıcı koyar.
 
 **Kurmadan, taşınabilir:** program bu reponun içinde de duruyor: `RheadricLumen.exe` ve yanındaki üç DLL (çizim motoru:
 `libSkiaSharp.dll`, `libHarfBuzzSharp.dll`, `av_libglesv2.dll`). Bunları
-[`Rheadric-Lumen-v2.1.2-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.2-alpha/Rheadric-Lumen-v2.1.2-alpha-win64.zip) (~17.0 MB)
+[`Rheadric-Lumen-v2.1.3-alpha-win64.zip`](https://github.com/rheadricc/RheadricLumen/releases/download/v2.1.3-alpha/Rheadric-Lumen-v2.1.3-alpha-win64.zip) (~17.1 MB)
 olarak ya da sayfanın üstündeki yeşil **`<> Code`** düğmesi → **Download ZIP** ile al. **Zip'i çıkar** (sağ tık →
 *Tümünü Ayıkla…*), **Rheadric Lumen** klasörünü kalıcı bir yere taşı ve `RheadricLumen.exe`'ye çift tıkla. Dört dosyayı
 birlikte tut.
@@ -534,6 +535,7 @@ renk ya da efekt ver, fanları ayarla, oyundayken sensörlere göz at.
 | 🌈 **Renkler** | Renk çarkı, HEX girişi, 8 temel renk, özel renk yuvası ve favoriler. Parlaklık 0–100 |
 | ✨ **Efektler** | **Yazılım efektleri** seçili bütün cihazlarda çalışır: Spektrum, Nabız, Ateş, Aurora, Termal, Sensör ve Müzik (duyduğuna tepki verir). Termal ve Sensör, seçtiğin değeri (GPU, CPU ya da RAM; sıcaklık ya da yük) belirlediğin aralıkta izler. **Donanım efektleri** (Sabit, Nefes, Gökkuşağı, Renk döngüsü, Anakart senkronu, Kapalı) ekran kartının kendisinde çalışır; uygulama kapalıyken ve yeniden başlattıktan sonra da kalır |
 | 💾 **Profiller** | 6 hazır görünüm; kendi profillerini kaydet, üzerine yaz, sil |
+| 🌙 **Boşta kapanma** | Klavyeye, fareye ve oyun kumandasına bir süre (1–120 dk) dokunulmazsa seçtiğin cihazların ışığı kapanır; ilk dokunuşta geri gelir |
 
 ### Fanlar
 

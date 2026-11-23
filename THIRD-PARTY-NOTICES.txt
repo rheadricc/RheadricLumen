@@ -1,4 +1,4 @@
-RHEADRIC LUMEN 2.1.2-alpha - THIRD-PARTY NOTICES
+RHEADRIC LUMEN 2.1.3-alpha - THIRD-PARTY NOTICES
 ==================================================
 
 RheadricLumen.exe is a Native AOT build: the .NET runtime and the libraries below are compiled
